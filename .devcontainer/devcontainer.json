@@ -1,0 +1,84 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/python:3.13",
+  "hostRequirements": {
+    "cpus": 4,
+    "storage": "32gb"
+  },
+  "waitFor": "onCreateCommand",
+  "onCreateCommand": "",
+  "updateContentCommand": "",
+  "postCreateCommand": "pip install -r requirements.txt",
+  "postAttachCommand": "",
+  "portsAttributes": {
+    "8888": {
+      "label": "Environment"
+    }
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": []
+    },
+    "vscode": {
+      "settings": {
+        "files.autoSave": "onFocusChange",
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        },
+        "editor.fontSize": 18,
+        "extensions.ignoreRecommendations": true,
+        "unwantedRecommendations": ["ms-python.vscode-python-envs"],
+        "terminal.integrated.defaultProfile.windows": "Git Bash",
+        "window.restoreWindows": "preserve",
+        "workbench.editorAssociations": {
+          "*.md": "vscode.markdown.preview.editor"
+        },
+        "editor.fontFamily": "JetBrains Mono",
+        "terminal.integrated.fontFamily": "monospace",
+        "workbench.colorTheme": "Default Dark+",
+        "workbench.iconTheme": "vscode-icons",
+        "github.copilot.enable": {
+          "*": true,
+          "python": false,
+          "html": false,
+          "css": false,
+          "sql": false
+        }
+      },
+      "extensions": [
+        "McCarter.start-git-bash",
+        "yy0931.vscode-sqlite3-editor",
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "esbenp.prettier-vscode",
+        "oderwat.indent-rainbow",
+        "mathematic.vscode-pdf",
+        "GitHub.codespaces",
+        "ms-python.debugpy",
+        "ms-python.vscode-pylance",
+        "saeris.markdown-github-alerts",
+        "bierner.markdown-preview-github-styles",
+        "mechatroner.rainbow-csv",
+        "ms-python.pylint",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-toolsai.datawrangler",
+        "bierner.markdown-mermaid",
+        "ms-toolsai.vscode-jupyter-powertoys",
+        "narasimapandiyan.jetbrainsmono",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-british-english",
+        "yusifaliyevpro.vscicons"
+      ]
+    }
+  },
+  "forwardPorts": [8888],
+  "remoteEnv": {
+    "PIP_NO_CACHE_DIR": "1"
+  }
+}
